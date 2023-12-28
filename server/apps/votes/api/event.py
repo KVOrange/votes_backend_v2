@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.request import Request
@@ -7,6 +8,7 @@ from server.apps.votes.models import EventMember
 from server.decorators.member_auth import member_authorization
 
 
+@csrf_exempt
 @api_view(['GET'])
 @member_authorization()
 def event_api(request: Request) -> Response:

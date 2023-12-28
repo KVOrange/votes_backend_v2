@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.request import Request
@@ -8,6 +9,7 @@ from .schemas.members import MemberAuth
 from ..models import EventMember
 
 
+@csrf_exempt
 @api_view(['POST'])
 def member_auth_api(request: Request) -> Response:
     """Api авторизации участника голосования.

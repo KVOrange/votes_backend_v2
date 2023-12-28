@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.request import Request
@@ -10,6 +11,7 @@ from .schemas.votes import SendVoteAnswer
 from ..models import Vote
 
 
+@csrf_exempt
 @api_view(['GET'])
 @member_authorization()
 def votes_api(request: Request) -> Response:
@@ -40,6 +42,7 @@ def votes_api(request: Request) -> Response:
     }, status=status.HTTP_200_OK)
 
 
+@csrf_exempt
 @api_view(['GET', 'POST'])
 @member_authorization()
 def votes_options_api(request: Request, vote_id: int) -> Response:
