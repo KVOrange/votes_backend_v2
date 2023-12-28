@@ -130,7 +130,10 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PARSER_CLASSES': (
         'rest_framework.parsers.JSONParser',
-    )
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+    ),
 }
 
 LANGUAGE_CODE = 'ru-ru'
