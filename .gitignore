@@ -1,0 +1,7 @@
+server/apps/system/migrations
+server/apps/votes/migrations
+server.log
+db.sqlite3
+config.ini
+.venv
+venv
