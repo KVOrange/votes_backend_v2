@@ -7,6 +7,7 @@ config.read(CONFIG_FILE)
 
 SERVER_IP = config.get('SERVER', 'IP')
 DOMEN = config.get('SERVER', 'DOMEN')
+SECRET_KEY = config.get('SERVER', 'SECRET_KEY')
 ADMIN_PATH = config.get('SERVER', 'ADMIN_PATH')
 
 DATABASE_HOST = config.get('DATABASE', 'HOST')
